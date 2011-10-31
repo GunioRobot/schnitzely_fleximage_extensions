@@ -3,7 +3,7 @@ class Fleximage::Operator::Polaroid < Fleximage::Operator::Base
     @image.border!(border_width, border_width, "#f0f0ff")
 
     # Bend the image
-    @image.background_color = "none" 
+    @image.background_color = "none"
 
     amplitude = @image.columns * 0.01        # vary according to taste
     wavelength = @image.rows  * 2
@@ -15,7 +15,7 @@ class Fleximage::Operator::Polaroid < Fleximage::Operator::Base
     # Make the shadow
     shadow = @image.flop
     shadow = shadow.colorize(1, 1, 1, "gray75")     # shadow color can vary to taste
-    shadow.background_color = "white"       # was "none" 
+    shadow.background_color = "white"       # was "none"
     shadow.border!(10, 10, "white")
     shadow = shadow.blur_image(0, 3)        # shadow blurriness can vary according to taste
 
